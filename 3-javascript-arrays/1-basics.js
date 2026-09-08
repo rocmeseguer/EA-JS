@@ -5,7 +5,9 @@
 
 // 1. Adding elements (The Immutable Way)
 const baseWords = ["I", "go"];
-// baseWords.push("home"); // ❌ Mutates the original array
+
+// ❌ Mutates the original array
+// baseWords.push("home"); 
 // Instead of .push(), we create a NEW array
 const finalWords = [...baseWords, "home"]; 
 console.log("Original:", baseWords); // ["I", "go"]
