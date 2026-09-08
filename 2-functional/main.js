@@ -4,7 +4,6 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
-
 // ❌ Imperative (Non-Functional) Approach
 const doubledNumbers = [];
 for (let i = 0; i < numbers.length; i++) {
@@ -17,13 +16,6 @@ doubledFunctional = numbers.map(num => num * 2);
 console.log(doubledFunctional); // [2, 4, 6, 8, 10]
 
 // ------------------ Pure Functions vs Side Effects ------------------
-
-// Functions can be stored in variables, passed as arguments, or returned.
-const greet = function(name) {
-	return `Hello, ${name}!`;
-  };
-  
-console.log(greet("Alice")); // "Hello, Alice!"
 
 // ❌ Impure Function: It modifies an external variable (Side Effect)
 let total = 0;
@@ -49,14 +41,14 @@ console.log(add(2, 3)); // 5 (always the same output)
 
 const originalArray = [1, 2, 3, 4];
 
+// ❌ Non-functional (Mutates the array)
+// Avoid mutation
+originalArray.push(5); 
+
 //  ✅ Functional (Creates a new array)
 // Use Spread Operator to create a copy
 const newArray = [...originalArray, 5];
 console.log(newArray); // [1, 2, 3, 4, 5]
-
-// Non-functional (Mutates the array)
-// ❌ Avoid mutation
-originalArray.push(5); 
 
 //  ✅ Update property without mutating the original object
 const user = { name: 'Juan', age: 25 };
